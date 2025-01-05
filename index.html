@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women Helpline 24/7</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navigation -->
+      <nav>
+        <div class="navbar-brand">Women Helpline</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="https://safetyissues-and-domesticviolences.netlify.app/"><i class="fas fa-shield-alt"></i> Safety</a></li>
+          <li><a href="https://marriagecounse.netlify.app/"><i class="fas fa-heart"></i> Marriage Counseling</a></li>
+          <li><a href="https://womeanhealth-schemes-ohhb3d0pc.vercel.app"><i class="fas fa-notes-medical"></i> Health Schemes</a></li>
+          <li><a href="https://delightful-selkie-514366.netlify.app/"><i class="fas fa-landmark"></i> Govt Schemes</a></li>
+          <li><a href="https://women-employment.netlify.app/"><i class="fas fa-briefcase"></i> Jobs</a></li>
+          <li><a href="https://womens-education.vercel.app/"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="https://meek-biscuit-bd0f20.netlify.app/"><i class="fas fa-fist-raised"></i> Empowerment Cell</a></li>
+        </ul>
+        
+      </nav>
+      
+      <div class="auth-buttons">
+        <button class="login">
+          <i class="fas fa-sign-in-alt"></i><a href="log.html">Login</a>
+        </button>
+        <button class="register">
+          <i class="fas fa-user-plus"></i><a href="reg.html">Register</a>
+        </button>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="main-text">
+          <h1>
+            Women Helpline <br />
+            24/7 Support
+          </h1>
+          <p>Your trusted companion for safety</p>
+          <p>health, and empowerment.</p>
+          <button><a href="log.html">Sign in</a></button>
+          <button><a href="reg.html">Sign up</a></button>
+        </div>
+
+        <!-- Features Section -->
+        <div class="right">
+          <div class="box">
+            <div class="inner-box">
+              <h3>24/7 Support</h3>
+              <p>Help is just a call away!</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="inner-box">
+              <h3>Confidential</h3>
+              <p>100% confidential and safe.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="inner-box">
+              <h3>Empowering Women</h3>
+              <p>Helping women build a better future.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (navToggle && navLinks) {
+          navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            console.log("Toggle clicked!"); // Debugging log
+          });
+        } else {
+          console.error("nav-toggle or nav-links not found!");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #e1989f 70%, #b45e47 30%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 0.3rem 1.3rem;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.auth-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 0.3rem 1rem;
+  background-color: #b45e47;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-buttons button a {
+  text-decoration: none;
+  color: white;
+}
+
+.auth-buttons button:hover {
+  background-color: #e1989f;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-text h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.main-text p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.main-text button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b45e47;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.main-text button a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-text button:hover {
+  background-color: #e1989f;
+}
+
+/* Features Section */
+.right {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+.inner-box {
+  padding: 10px;
+}
+
+.inner-box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Nav Links */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    opacity: 0; /* Start with navbar hidden */
+  transform: translateY(-20px); /* Start from above */
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+    opacity: 0.9; /* Make the navbar visible */
+    transform: translateY(0); 
+    background: #f27b87;
+    transition: 10ms;
+  }
+
+  /* Hamburger Menu */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Auth Buttons */
+  .auth-buttons {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .auth-buttons button {
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons button a {
+    text-align: center;
+  }
+
+  /* Main Content Adjustments */
+  .main-text h1 {
+    font-size: 32px;
+  }
+
+  .main-text p {
+    font-size: 16px;
+  }
+}
